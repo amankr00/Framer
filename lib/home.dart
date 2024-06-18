@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -6,11 +8,30 @@ import 'package:framer/phases/phase1.dart';
 import 'package:framer/phases/phase2.dart';
 import 'package:framer/phases/phase3.dart';
 import 'package:framer/phases/phase4.dart';
+import 'package:framer/phases/phase4Viewer.dart';
 import 'package:framer/phases/phase5.dart';
+import 'package:provider/provider.dart';
 // import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 class HomeMain extends StatelessWidget {
+  final PageController controller = PageController(initialPage: 1);
+  Timer? timer;
+
+  void startTimer() {
+    timer = Timer.periodic(Duration(seconds: 5), (Timer timer) {
+      // Check if the controller and its page are valid
+      if (controller.hasClients) {
+        final int nextPage = (controller.page!.round() + 1) % 4;
+        controller.animateToPage(
+          nextPage,
+          duration: Duration(milliseconds: 500),
+          curve: Curves.ease,
+        );
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -23,6 +44,7 @@ class HomeMain extends StatelessWidget {
   }
 
   SingleChildScrollView completePage(BuildContext context, String type) {
+    startTimer();
     double pRt = MediaQuery.of(context).size.width;
     double pLt = MediaQuery.of(context).size.width;
     if (type == "Mobile") {
@@ -86,8 +108,10 @@ class HomeMain extends StatelessWidget {
 
             // 4th phase
             Padding(
-                padding: const EdgeInsets.only(top: 100),
-                child: phase4()),
+                padding: EdgeInsets.only(top: 100),
+                child: Container(
+                    color: Color.fromARGB(143, 243, 239, 239),
+                    child: Phase4Viewer())),
 
             // 5th phase
 
@@ -122,5 +146,7 @@ class HomeMain extends StatelessWidget {
             ),
           ],
         ));
+
+    // final controller = PageController(initialPage: 1);
   }
 }
