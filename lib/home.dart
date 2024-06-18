@@ -23,14 +23,23 @@ class HomeMain extends StatelessWidget {
   }
 
   SingleChildScrollView completePage(BuildContext context, String type) {
-  double pRt=0;
-           if (type == "Mobile"){
-           pRt =30; 
-           }else if (type == "tablet"){
-           pRt =90;}else{
-           pRt =150;}
+    double pRt = MediaQuery.of(context).size.width;
+    double pLt = MediaQuery.of(context).size.width;
+    if (type == "Mobile") {
+      pRt = pRt * 0.02;
+    } else if (type == "tablet") {
+      pRt = pRt * 0.08;
+      pLt = pLt * 0.02;
+    } else {
+      if (pRt < 1000) {
+        pRt = pRt * 0.14;
+        pLt = pLt * 0.4;
+      } else {
+        pRt = 150;
+        pLt = 50;
+      }
+    }
 
-  
     return SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(
@@ -39,13 +48,12 @@ class HomeMain extends StatelessWidget {
             navbar(),
 
             // Lower Body  -> 1st phase
-            
 
-            Phase1(pRt),
+            Phase1(pRt, pLt),
 
             Container(
                 child: Text(
-              'Trusted by some of the best in the business'+type,
+              'Trusted by some of the best in the business' + type,
               style: TextStyle(
                 fontSize: 17,
                 letterSpacing: 0,
@@ -77,7 +85,9 @@ class HomeMain extends StatelessWidget {
             phase3(),
 
             // 4th phase
-            Padding(padding: const EdgeInsets.only(top: 100), child: phase4()),
+            Padding(
+                padding: const EdgeInsets.only(top: 100),
+                child: phase4()),
 
             // 5th phase
 

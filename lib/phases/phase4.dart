@@ -29,24 +29,28 @@ class phase4 extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
 
-              Container(
-              height: 130,),
+              SizedBox(
+              height: 90,),
             
               Container(
               // child : Text('"Framer has been a game-changer in enabling us to bring all stakeholders on board with what the final product experience should actually feel like."',
               // style: TextStyle(
               // color: Colors.black,),)
 
-              width: 600,
-              height: 100,
+              // width: 600,
+              // height: 100,
               // color: Colors.green,
+              width: MediaQuery.of(context).size.width * 0.5,
 
-              child : RichText(text: TextSpan(
-                  text: '"Framer has been a game-changer in enabling us to bring all stakeholders on board with what the final product experience should actually feel like."',
+              child : RichText(
+              textAlign: TextAlign.justify,
+              text: TextSpan(
+                  text: "Samaksh App was my Idea to ensure teacher's punctuality and to increase student's daily turnout. I am glad that Nishant puts his best efförts to developthis app.\nAfter a year of evaluation, this app tums out to be very efficient and effective and bring about a positive change in this regard and also the school's opening punctuality increases to 96% within a year.\n",
                   style: TextStyle(
-                    color: Color.fromARGB(255, 0, 0, 0),
-                    fontSize: 24,
+                    color: Color.fromARGB(255, 65, 65, 65),
+                    fontSize: 20,
                     fontStyle: FontStyle.italic,
+                    fontWeight: FontWeight.w300
                   ),
                   ),
                   )
@@ -64,7 +68,7 @@ class phase4 extends StatelessWidget {
               // color: Colors.blue,
 
               child : RichText(text: TextSpan(
-                  text: 'Evan Karageorgos, Senior Product Designer at Booking.com ',
+                  text: 'Shri Pranav Kumar, I.A.S. , Secretary, Home Department, Bihar ',
                   style: TextStyle(
                     color: Color.fromARGB(255, 1, 1, 1),
                     fontSize: 22,

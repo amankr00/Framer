@@ -5,9 +5,12 @@ import 'package:framer/navbar/navbar.dart';
 class Phase1 extends StatelessWidget {
 
   double pRt;
-  Phase1(this.pRt); 
+  double pLt;
+
+  Phase1(this.pRt,this.pLt); 
   @override
   Widget build(BuildContext context) {
+
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -21,13 +24,14 @@ class Phase1 extends StatelessWidget {
               children: [
                 // Container(height:50),
                 Padding(
-                  padding: const EdgeInsets.only(bottom: 30.0),
+                  padding:  EdgeInsets.only(bottom: 30.0),
                   child: Container(
                     // width: 500,
                     // height: 140,
                     width: MediaQuery.of(context).size.width * 0.3,
                     // height: MediaQuery.of(context).size.height * 0.4,
-                    child: Text('Create better prototypes, faster.  ${pRt} ',
+                    // ${pRt}   ${MediaQuery.of(context).size.width } 
+                    child: Text('Create better prototypes, faster.  ',
                         style: TextStyle(
                           fontSize: 60,
                           letterSpacing: 0,
@@ -54,7 +58,7 @@ class Phase1 extends StatelessWidget {
                 ),
 
                 Padding(
-                  padding: const EdgeInsets.only(top: 50),
+                  padding:  EdgeInsets.only(top: 50),
                   child: Container(
                     width: 180,
                     height: 50,
@@ -96,7 +100,7 @@ class Phase1 extends StatelessWidget {
         // Right Body
 
         Padding(
-          padding: const EdgeInsetsDirectional.fromSTEB(0, 30, 50, 0),
+          padding: EdgeInsetsDirectional.fromSTEB(0, 30, pLt , 0),
           child: Container(
               width: MediaQuery.of(context).size.width * 0.5,
               height: MediaQuery.of(context).size.height * 0.7,
