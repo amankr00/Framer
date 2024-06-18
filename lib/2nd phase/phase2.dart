@@ -6,11 +6,14 @@ class phase2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Row(
                 // Purple image and Right - side text
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Padding(
-                    padding: const EdgeInsetsDirectional.fromSTEB(18, 0, 150, 0),
-                    child: Container(
+                  // Padding(
+                  //   padding: const EdgeInsetsDirectional.fromSTEB(18, 0, 150, 0),
+                    // child: 
+                    Container(
                         // color:Colors.black,
+                        width: MediaQuery.of(context).size.width * 0.4,
                         child: ClipRect(
                             child: Image.asset(
                       'assets/images/sidelook.png',
@@ -18,7 +21,7 @@ class phase2 extends StatelessWidget {
                       height: 750,
                       fit: BoxFit.contain,
                     ))),
-                  ),
+                  // ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -36,7 +39,8 @@ class phase2 extends StatelessWidget {
                       // )
 
                       Container(
-                          width: 450,
+                          // width: 450,
+                          width: MediaQuery.of(context).size.width * 0.4,
                           // color: Colors.black12,
 
                           child: Align(
@@ -76,7 +80,8 @@ class phase2 extends StatelessWidget {
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 50, 0, 0),
                         child: Container(
-                            width: 550,
+                            // width: 550,
+                            width: MediaQuery.of(context).size.width * 0.4,
                             // height: 300,
                             // color: Colors.blue,
                             child: Text(
