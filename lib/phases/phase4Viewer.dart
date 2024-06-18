@@ -10,6 +10,7 @@ class Phase4Viewer extends StatefulWidget {
 }
 
 class _MyAppState extends State<Phase4Viewer> {
+
   late PageController controller;
   late Timer timer;
 
@@ -50,6 +51,7 @@ class _MyAppState extends State<Phase4Viewer> {
         Expanded(
           child: PageView(
             controller: controller,
+            physics: NeverScrollableScrollPhysics(),
             scrollDirection: Axis.horizontal,
             children: [
               phase4("1", "2", "3"),

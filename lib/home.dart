@@ -10,6 +10,7 @@ import 'package:framer/phases/phase3.dart';
 import 'package:framer/phases/phase4.dart';
 import 'package:framer/phases/phase4Viewer.dart';
 import 'package:framer/phases/phase5.dart';
+import 'package:framer/phases/phase6.dart';
 import 'package:provider/provider.dart';
 // import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -110,7 +111,8 @@ class HomeMain extends StatelessWidget {
             Padding(
                 padding: EdgeInsets.only(top: 100),
                 child: Container(
-                    color: Color.fromARGB(143, 243, 239, 239),
+                    height: 450,
+                    color: Color.fromRGBO(243, 239, 239, 0.561),
                     child: Phase4Viewer())),
 
             // 5th phase
@@ -120,29 +122,72 @@ class HomeMain extends StatelessWidget {
               child: phase5(),
             ),
 
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(0, 100, 0, 100),
+              child: phase6(),
+            ),
+
+            Container(
+              // height: 830,
+              height: MediaQuery.of(context).size.height * 0.93,
+              width: MediaQuery.of(context).size.width * 1.00,
+              color: Colors.blue,
+
+              child : Column(
               children: [
-                Container(
-                    width: MediaQuery.of(context).size.width * 0.5,
-                    child: RichText(
-                        text: TextSpan(children: [
-                      TextSpan(
-                          text: 'Handoff ',
-                          style: TextStyle(
-                            fontSize: 50,
-                            color: Color(0xfffe4d87),
-                            fontWeight: FontWeight.bold,
-                          )),
-                      TextSpan(
-                          text: 'that devs dream about. ',
-                          style: TextStyle(
-                            fontSize: 50,
-                            color: Color.fromARGB(255, 0, 0, 0),
-                            fontWeight: FontWeight.bold,
-                          )),
-                    ]))),
+
+              SizedBox(
+              height: 90,),
+
+              Container(
+              // height: MediaQuery.of(context).size.height * 0.,
+              width: MediaQuery.of(context).size.width * 0.29,
+                child: Text('Get started with framer today',
+                textAlign: TextAlign.center,
+                style:TextStyle(
+                fontSize : 50,
+                fontWeight: FontWeight.bold,
+                decoration: TextDecoration.none,
+                color: const Color.fromARGB(255, 255, 255, 255) )),
+              ),
+
+              SizedBox(
+              height: 20,),
+
+              Container(
+              width: 200,
+              height: 60,
+              decoration: BoxDecoration(
+              color: Color.fromARGB(255, 248, 248, 248),
+              borderRadius: BorderRadius.circular(50),
+            ),
+
+              child : Align(alignment: AlignmentDirectional(0, 0),
+
+              child : Text('Sign up for free ',
+              // textAlign: TextAlign.center,
+              style: TextStyle(
+              color: Color.fromARGB(255, 5, 108, 218),
+              decoration: TextDecoration.none,
+              fontSize: 20,
+              fontWeight: FontWeight.w300),),)
+              ),
+
+              SizedBox(
+              height: 80,),
+
+              Container(
+              width : MediaQuery.of(context).size.width * 0.7,
+              height: MediaQuery.of(context).size.height * 0.51,
+              child : ClipRect(
+              child : Image.asset('assets/images/big.png',
+              fit: BoxFit.contain,))),
+
+
+
+
               ],
+              ),
             ),
           ],
         ));
