@@ -17,8 +17,8 @@ class phase2 extends StatelessWidget {
                         child: ClipRect(
                             child: Image.asset(
                       'assets/images/sidelook.png',
-                      width: 800,
-                      height: 750,
+                      // width: 800,
+                      // height: 750,
                       fit: BoxFit.contain,
                     ))),
                   // ),
@@ -40,7 +40,7 @@ class phase2 extends StatelessWidget {
 
                       Container(
                           // width: 450,
-                          width: MediaQuery.of(context).size.width * 0.4,
+                          width: MediaQuery.of(context).size.width * 0.3,
                           // color: Colors.black12,
 
                           child: Align(

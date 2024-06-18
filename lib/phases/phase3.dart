@@ -9,13 +9,13 @@ class phase3 extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                  Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 80, 0),
+                        padding: EdgeInsetsDirectional.fromSTEB(80, 0, 0, 0),
                   child : Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Container(
                             // width: 400,
-                            width: MediaQuery.of(context).size.width * 0.4,
+                            width: MediaQuery.of(context).size.width * 0.3,
                             // height: 300,
                             child: RichText(
                                 text: TextSpan(children: [
