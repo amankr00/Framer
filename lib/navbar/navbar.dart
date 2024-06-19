@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 
 class navbar extends StatelessWidget {
@@ -21,15 +22,16 @@ class navbar extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     // crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                    
                       Text(
                         'NS APPS INNOVATIONS',
-                        style: TextStyle(
-                          fontSize: 17,
+                        style : GoogleFonts.rubik(
+                          fontSize: 20,
                           letterSpacing: 0,
-                          fontWeight: FontWeight.w900,
+                          fontWeight: FontWeight.w400,
                           decoration: TextDecoration.none,
-                          color: Colors.black,
-                        ),
+                          color: const Color.fromARGB(255, 0, 0, 0)
+                      ),
                       ),
                       Container(
                         // Navbar Open Framer
@@ -49,7 +51,7 @@ class navbar extends StatelessWidget {
                           children: [
                             ClipRRect(
                                 child: Image.asset(
-                              'assets/images/profile.png',
+                              'assets/images/play.png',
                               width: 40,
                               height: 40,
                             )),

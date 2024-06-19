@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
   return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'My App',
+      title: 'NS APPS INNOVATIONS',
       theme: ThemeData(
           primarySwatch: Colors.amber,
           fontFamily: GoogleFonts.archivoBlack().fontFamily
