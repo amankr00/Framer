@@ -392,6 +392,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.0"
+  get:
+    dependency: "direct main"
+    description:
+      name: get
+      sha256: e4e7335ede17452b391ed3b2ede016545706c01a02292a6c97619705e7d2a85e
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.6.6"
+  gif_view:
+    dependency: "direct main"
+    description:
+      name: gif_view
+      sha256: "6e803e6ed892a6a0ff6671554550780a56d053cc1f06504086794001b3cd000e"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.4.4"
   go_router:
     dependency: "direct main"
     description:

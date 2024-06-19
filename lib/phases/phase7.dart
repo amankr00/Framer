@@ -60,8 +60,6 @@ class phase7 extends StatelessWidget {
                 Container(
                 
                 child : Anime(),
-                width: 50,
-                height: 50,
                 // fit : BoxFit.contain,
                 ),
 

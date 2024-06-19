@@ -22,7 +22,7 @@ class navbar extends StatelessWidget {
                     // crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Framer',
+                        'NS APPS INNOVATIONS',
                         style: TextStyle(
                           fontSize: 17,
                           letterSpacing: 0,
@@ -54,7 +54,7 @@ class navbar extends StatelessWidget {
                               height: 40,
                             )),
                             Text(
-                              'Open Framer',
+                              'Open Play Store',
                               style: TextStyle(
                                 fontSize: 15,
                                 letterSpacing: 0,

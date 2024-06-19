@@ -1,5 +1,5 @@
 import 'dart:async';
-
+import 'package:framer/phases/button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:framer/phases/anime.dart';
@@ -14,8 +14,10 @@ import 'package:framer/phases/phase5.dart';
 import 'package:framer/phases/phase6.dart';
 import 'package:framer/phases/phase7.dart';
 import 'package:provider/provider.dart';
-// import 'package:google_fonts/google_fonts.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:gif_view/gif_view.dart';
+import 'package:get/get.dart';
 
 class HomeMain extends StatelessWidget {
   final PageController controller = PageController(initialPage: 1);
@@ -69,6 +71,7 @@ class HomeMain extends StatelessWidget {
         scrollDirection: Axis.vertical,
         child: Column(
           children: [
+            // Button(),
             // Navbar
             navbar(),
 
@@ -88,18 +91,23 @@ class HomeMain extends StatelessWidget {
               ),
             )),
 
-            Container(
-              // width: 1400,
-              height: 100,
-              // color: Colors.blue,
-              child: ClipRect(
-                  child: Image.asset(
-                'assets/images/lowlogo.png',
-                // width: 700,
-                // height: 250,
-                fit: BoxFit.contain,
-              )),
+            SizedBox(
+              height: 30,
             ),
+
+            Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+              iconDesign('IRIS APP', 'assets/images/iris.png'),
+              iconDesign('TaskFlow App', 'assets/images/taskflow.png'),
+              iconDesign('Samadhan App', 'assets/images/samadhan.png'),
+              iconDesign('Maa App', 'assets/images/maa.png'),
+              iconDesign('Samaksh', 'assets/images/samaksh.png'),
+              iconDesign('Home Insights', 'assets/images/home.png'),
+              iconDesign('Shravani', 'assets/images/shravani.png'),
+              iconDesign('Prathmikta', 'assets/images/prathmikta.png'),
+              iconDesign('DakPad', 'assets/images/da.png'),
+            ]),
+
+            SizedBox(height: 70,),
 
             // Phase 2
 
@@ -130,10 +138,39 @@ class HomeMain extends StatelessWidget {
             ),
 
             phase7(),
-             
           ],
         ));
 
     // final controller = PageController(initialPage: 1);
+  }
+
+  Container iconDesign(String appName, String imageURL) {
+    return Container(
+    width: 120,
+      child: Column(crossAxisAlignment: CrossAxisAlignment.center,mainAxisAlignment: MainAxisAlignment.center, children: [
+        Container(
+            child: ClipRect(
+                child: Image.asset(
+          imageURL,
+          height: 48,
+          width: 48,
+        ))),
+        // Padding(
+        //   padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+        //   child: Text(
+        //     appName,
+        //     style: GoogleFonts.robotoMono(
+        //       textStyle: TextStyle(
+        //         fontSize: 14,
+        //         letterSpacing: 0,
+        //         fontWeight: FontWeight.normal,
+        //         decoration: TextDecoration.none,
+        //         color: const Color.fromARGB(255, 0, 0, 0),
+        //       ),
+        //     ),
+        //   ),
+        // ),
+      ]),
+    );
   }
 }
