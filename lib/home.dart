@@ -105,7 +105,7 @@ class HomeMain extends StatelessWidget {
               ),
             )
             ).animate()
-                  .fade(duration: 1000.ms)
+                  .fade(delay: 100.ms)
                   .slideY(begin: -100,end: 0),
                   // .shake(),
                   
@@ -126,9 +126,8 @@ class HomeMain extends StatelessWidget {
               iconDesign('DakPad', 'assets/images/da.png'),
             ])
             .animate()
-                  .fade(duration: 1000.ms)
-                  .slideY(begin: 1,end: 0)
-                  .shake(),
+                  .fade(delay: 100.ms)
+                  .slideY(begin: 1,end: 0),
 
             SizedBox(
               height: 70,

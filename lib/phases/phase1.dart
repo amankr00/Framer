@@ -44,7 +44,7 @@ class Phase1 extends StatelessWidget {
                       ),
                     )
                   .animate()
-                  .fade(duration: 800.ms)
+                  .fade(delay: 100.ms)
                   .slideX(begin: -5,end: 0)
                   .shake(),
                   ),
@@ -64,9 +64,8 @@ class Phase1 extends StatelessWidget {
                         color: const Color.fromARGB(255, 0, 0, 0),
                       ))
                       .animate()
-                  .fade(duration: 800.ms)
-                  .slideX(begin: -5,end: 0)
-                  .shake(),
+                  .fade(delay: 100.ms)
+                  .slideX(begin: -5,end: 0),
                 ),
 
                 Padding(
@@ -106,7 +105,7 @@ class Phase1 extends StatelessWidget {
                     )
                     ,
                   ).animate()
-                  .fade(duration: 800.ms)
+                  .fade(delay : 100.ms)
                   .slideX(begin: -5,end: 0),
                 )
               ]),
@@ -131,9 +130,8 @@ class Phase1 extends StatelessWidget {
                 ),
               ))
               .animate()
-                  .fade(duration: 950.ms)
-                  .slideX(begin: 1,end: 0)
-                  .shake(),
+                  .fade(delay: 100.ms)
+                  .slideX(begin: 1,end: 0),
         ),
 
         //   Positioned(
