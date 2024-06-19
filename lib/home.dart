@@ -3,6 +3,7 @@ import 'package:framer/phases/button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:framer/phases/anime.dart';
+import 'package:framer/phases/hover.dart';
 import 'package:framer/phases/paraPassing.dart';
 import 'package:framer/phases/testAnimate.dart';
 import 'package:lottie/lottie.dart';
@@ -81,6 +82,9 @@ class HomeMain extends StatelessWidget {
             // para(initialText: 'Hello, Starkiee!'),
             // Navbar
             navbar(),
+
+            
+            
           
           // Text('data')
           // .animate()
@@ -111,20 +115,21 @@ class HomeMain extends StatelessWidget {
                   
 
             SizedBox(
-              height: 30,
+              height: 50,
             ),
 
-            Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-              iconDesign('IRIS APP', 'assets/images/iris.png'),
-              iconDesign('TaskFlow App', 'assets/images/taskflow.png'),
-              iconDesign('Samadhan App', 'assets/images/samadhan.png'),
-              iconDesign('Maa App', 'assets/images/maa.png'),
-              iconDesign('Samaksh', 'assets/images/samaksh.png'),
-              iconDesign('Home Insights', 'assets/images/home.png'),
-              iconDesign('Shravani', 'assets/images/shravani.png'),
-              iconDesign('Prathmikta', 'assets/images/prathmikta.png'),
-              iconDesign('DakPad', 'assets/images/da.png'),
-            ])
+            // Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+            //   iconDesign('IRIS APP', 'assets/images/iris.png'),
+            //   iconDesign('TaskFlow App', 'assets/images/taskflow.png'),
+            //   iconDesign('Samadhan App', 'assets/images/samadhan.png'),
+            //   iconDesign('Maa App', 'assets/images/maa.png'),
+            //   iconDesign('Samaksh', 'assets/images/samaksh.png'),
+            //   iconDesign('Home Insights', 'assets/images/home.png'),
+            //   iconDesign('Shravani', 'assets/images/shravani.png'),
+            //   iconDesign('Prathmikta', 'assets/images/prathmikta.png'),
+            //   iconDesign('DakPad', 'assets/images/da.png'),
+            // ])
+            App()
             .animate()
                   .fade(delay: 100.ms)
                   .slideY(begin: 1,end: 0),
@@ -200,4 +205,5 @@ class HomeMain extends StatelessWidget {
           ]),
     );
   }
+  
 }
