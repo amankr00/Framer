@@ -35,7 +35,7 @@ dependencies:
   firebase_auth: ^5.0.0
   auto_size_text: 3.0.0
   cached_network_image: ^3.3.1
-  flutter_animate: ^4.4.0
+  flutter_animate: ^4.5.0
   flutter_cache_manager: ^3.3.1
   font_awesome_flutter: ^10.6.0
   from_css_color: 2.0.0

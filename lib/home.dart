@@ -3,6 +3,8 @@ import 'package:framer/phases/button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:framer/phases/anime.dart';
+import 'package:framer/phases/paraPassing.dart';
+import 'package:framer/phases/testAnimate.dart';
 import 'package:lottie/lottie.dart';
 import 'package:framer/navbar/navbar.dart';
 import 'package:framer/phases/phase1.dart';
@@ -18,6 +20,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:gif_view/gif_view.dart';
 import 'package:get/get.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 
 class HomeMain extends StatelessWidget {
   final PageController controller = PageController(initialPage: 1);
@@ -70,10 +73,21 @@ class HomeMain extends StatelessWidget {
     return SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             // Button(),
+            // zero(),
+            // AnimatedTextExample(),
+            // para(initialText: 'Hello, Starkiee!'),
             // Navbar
             navbar(),
+          
+          // Text('data')
+          // .animate()
+          // .fade(duration: 1500.ms)
+          // .slideX(begin: -5,end: 0),
+
+            
 
             // Lower Body  -> 1st phase
 
@@ -89,7 +103,8 @@ class HomeMain extends StatelessWidget {
                 decoration: TextDecoration.none,
                 color: Color.fromARGB(235, 101, 100, 100),
               ),
-            )),
+            )
+            ),
 
             SizedBox(
               height: 30,
@@ -105,9 +120,14 @@ class HomeMain extends StatelessWidget {
               iconDesign('Shravani', 'assets/images/shravani.png'),
               iconDesign('Prathmikta', 'assets/images/prathmikta.png'),
               iconDesign('DakPad', 'assets/images/da.png'),
-            ]),
+            ])
+            .animate()
+                  .fade(duration: 1000.ms)
+                  .slideY(begin: 1,end: 0),
 
-            SizedBox(height: 70,),
+            SizedBox(
+              height: 70,
+            ),
 
             // Phase 2
 
@@ -146,31 +166,34 @@ class HomeMain extends StatelessWidget {
 
   Container iconDesign(String appName, String imageURL) {
     return Container(
-    width: 120,
-      child: Column(crossAxisAlignment: CrossAxisAlignment.center,mainAxisAlignment: MainAxisAlignment.center, children: [
-        Container(
-            child: ClipRect(
-                child: Image.asset(
-          imageURL,
-          height: 48,
-          width: 48,
-        ))),
-        // Padding(
-        //   padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
-        //   child: Text(
-        //     appName,
-        //     style: GoogleFonts.robotoMono(
-        //       textStyle: TextStyle(
-        //         fontSize: 14,
-        //         letterSpacing: 0,
-        //         fontWeight: FontWeight.normal,
-        //         decoration: TextDecoration.none,
-        //         color: const Color.fromARGB(255, 0, 0, 0),
-        //       ),
-        //     ),
-        //   ),
-        // ),
-      ]),
+      width: 120,
+      child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+                child: ClipRect(
+                    child: Image.asset(
+              imageURL,
+              height: 48,
+              width: 48,
+            ))),
+            // Padding(
+            //   padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+            //   child: Text(
+            //     appName,
+            //     style: GoogleFonts.robotoMono(
+            //       textStyle: TextStyle(
+            //         fontSize: 14,
+            //         letterSpacing: 0,
+            //         fontWeight: FontWeight.normal,
+            //         decoration: TextDecoration.none,
+            //         color: const Color.fromARGB(255, 0, 0, 0),
+            //       ),
+            //     ),
+            //   ),
+            // ),
+          ]),
     );
   }
 }

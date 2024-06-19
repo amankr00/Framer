@@ -40,8 +40,7 @@ class phase4 extends StatelessWidget {
                   child: RichText(
                     textAlign: TextAlign.justify,
                     text: TextSpan(
-                      text:
-                          testimonial1,
+                      text: testimonial1,
                       style: TextStyle(
                           color: Color.fromARGB(255, 65, 65, 65),
                           fontSize: 20,
@@ -49,8 +48,7 @@ class phase4 extends StatelessWidget {
                           fontWeight: FontWeight.w300),
                     ),
                   )),
-
-                   SizedBox(
+              SizedBox(
                 height: 40,
               ),
               Container(

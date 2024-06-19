@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
 class Button extends StatefulWidget {
   const Button({super.key});
 
@@ -14,16 +15,18 @@ class _ButtonState extends State<Button> {
       child: ElevatedButton(
         onPressed: () {
           showDialog(
-          barrierDismissible : true,
-          
+            barrierDismissible: true,
             context: context,
             builder: (_) => Container(
-            width: 500,
-            height: 400,
-            color: Color.fromARGB(255, 0, 251, 34),
+              width: 500,
+              height: 400,
+              color: Color.fromARGB(255, 0, 251, 34),
               child: Text(
-                'Good',  
-                style: TextStyle(fontSize: 20,color : Colors.purple, fontWeight: FontWeight.w600),
+                'Good',
+                style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.purple,
+                    fontWeight: FontWeight.w600),
               ),
             ),
           );

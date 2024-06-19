@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:framer/navbar/navbar.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -41,7 +42,11 @@ class Phase1 extends StatelessWidget {
                           color: const Color.fromARGB(255, 0, 0, 0),
                         ),
                       ),
-                    ),
+                    )
+                  .animate()
+                  .fade(duration: 800.ms)
+                  .slideX(begin: -5,end: 0)
+                  .shake(),
                   ),
                 ),
 
@@ -57,7 +62,11 @@ class Phase1 extends StatelessWidget {
                         fontWeight: FontWeight.w600,
                         decoration: TextDecoration.none,
                         color: const Color.fromARGB(255, 0, 0, 0),
-                      )),
+                      ))
+                      .animate()
+                  .fade(duration: 800.ms)
+                  .slideX(begin: -5,end: 0)
+                  .shake(),
                 ),
 
                 Padding(
@@ -94,8 +103,11 @@ class Phase1 extends StatelessWidget {
                           ),
                         ),
                       ],
-                    ),
-                  ),
+                    )
+                    ,
+                  ).animate()
+                  .fade(duration: 800.ms)
+                  .slideX(begin: -5,end: 0),
                 )
               ]),
         ),
@@ -117,7 +129,11 @@ class Phase1 extends StatelessWidget {
                   // height: 650,
                   fit: BoxFit.contain,
                 ),
-              )),
+              ))
+              .animate()
+                  .fade(duration: 950.ms)
+                  .slideX(begin: 1,end: 0)
+                  .shake(),
         ),
 
         //   Positioned(

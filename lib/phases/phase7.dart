@@ -37,13 +37,8 @@ class phase7 extends StatelessWidget {
                 color: Color.fromARGB(255, 248, 248, 248),
                 borderRadius: BorderRadius.circular(50),
               ),
-
-              
-
-              
-              child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+              child:
+                  Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                 Align(
                   alignment: AlignmentDirectional(0, 0),
                   child: Text(
@@ -56,21 +51,11 @@ class phase7 extends StatelessWidget {
                         fontWeight: FontWeight.w300),
                   ),
                 ),
-
                 Container(
-                
-                child : Anime(),
-                // fit : BoxFit.contain,
+                  child: Anime(),
+                  // fit : BoxFit.contain,
                 ),
-
-               
-
-
-
-
-
-              ])
-              ),
+              ])),
           SizedBox(
             height: 80,
           ),

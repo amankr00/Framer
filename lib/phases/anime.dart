@@ -8,7 +8,7 @@ class Anime extends StatefulWidget {
   State<Anime> createState() => _AnimeState();
 }
 
-class _AnimeState extends State<Anime>{
+class _AnimeState extends State<Anime> {
   // late final AnimationController _controller;
   // @override
   // void initState() {
