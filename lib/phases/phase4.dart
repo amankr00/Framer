@@ -49,6 +49,10 @@ class phase4 extends StatelessWidget {
                           fontWeight: FontWeight.w300),
                     ),
                   )),
+
+                   SizedBox(
+                height: 40,
+              ),
               Container(
                   // child : Text('"Framer has been a game-changer in enabling us to bring all stakeholders on board with what the final product experience should actually feel like."',
                   // style: TextStyle(

@@ -54,7 +54,7 @@ class _MyAppState extends State<Phase4Viewer> {
             physics: NeverScrollableScrollPhysics(),
             scrollDirection: Axis.horizontal,
             children: [
-              phase4("1", "2", "3"),
+              phase4("1", "Shri Pranav Kumar, I.A.S. Secretary, Home Department, Bihar", " Samaksh App was my Idea to ensure teacher's punctuality and to increase student's daily turnout. I am glad that Nishant puts his best efförts to develop this app. After a year of evaluation, this app tums out to be very efficient and effective and bring about a positive change in this regard and also the school's opening punctuality increases to 96% within a year."),
               phase4("4", "5", "6"),
               phase4("7", "8", "9"),
               phase4("10", "11", "12"),

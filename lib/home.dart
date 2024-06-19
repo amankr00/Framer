@@ -2,7 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'package:framer/phases/anime.dart';
+import 'package:lottie/lottie.dart';
 import 'package:framer/navbar/navbar.dart';
 import 'package:framer/phases/phase1.dart';
 import 'package:framer/phases/phase2.dart';
@@ -77,7 +78,7 @@ class HomeMain extends StatelessWidget {
 
             Container(
                 child: Text(
-              'Trusted by some of the best in the business' + type,
+              'Trusted by some of the best in the business', //,
               style: TextStyle(
                 fontSize: 17,
                 letterSpacing: 0,
@@ -129,6 +130,7 @@ class HomeMain extends StatelessWidget {
             ),
 
             phase7(),
+             
           ],
         ));
 
