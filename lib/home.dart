@@ -104,7 +104,11 @@ class HomeMain extends StatelessWidget {
                 color: Color.fromARGB(235, 101, 100, 100),
               ),
             )
-            ),
+            ).animate()
+                  .fade(duration: 1000.ms)
+                  .slideY(begin: -100,end: 0),
+                  // .shake(),
+                  
 
             SizedBox(
               height: 30,
@@ -123,7 +127,8 @@ class HomeMain extends StatelessWidget {
             ])
             .animate()
                   .fade(duration: 1000.ms)
-                  .slideY(begin: 1,end: 0),
+                  .slideY(begin: 1,end: 0)
+                  .shake(),
 
             SizedBox(
               height: 70,
