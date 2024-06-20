@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class App extends StatelessWidget {
   // Define your icon paths here
   final List<String> iconPaths = [
@@ -18,15 +17,13 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: iconPaths.map((iconPath) {
-              return IconWithHoverEffect(
-                iconPath: iconPath,
-                iconSize: 100.0, // Adjust the size as needed
-              );
-            }).toList(),
-          
-        
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: iconPaths.map((iconPath) {
+        return IconWithHoverEffect(
+          iconPath: iconPath,
+          iconSize: 100.0, // Adjust the size as needed
+        );
+      }).toList(),
     );
   }
 }
@@ -53,13 +50,18 @@ class _IconWithHoverEffectState extends State<IconWithHoverEffect> {
       onEnter: (_) => _mouseEnter(true),
       onExit: (_) => _mouseEnter(false),
       child: AnimatedContainer(
-        duration: Duration(milliseconds: 200),
+        duration: Duration(milliseconds: 300),
         curve: Curves.easeInOut,
-        transform: _isHovered ? Matrix4.diagonal3Values(1.2, 1.2, 0.5) : Matrix4.identity(),
-        child: Image.asset(
-          widget.iconPath,
-          width: widget.iconSize*0.5,
-          height: widget.iconSize*0.5,
+        transform: _isHovered
+            ? Matrix4.diagonal3Values(1.3, 1.3, 1.5)
+            : Matrix4.identity(),
+        child: Container(
+        width: MediaQuery.of(context).size.width * 0.025,
+          child: Image.asset(
+            widget.iconPath,
+            width: widget.iconSize * 0.5,
+            height: widget.iconSize * 0.5,
+          ),
         ),
       ),
     );

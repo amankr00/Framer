@@ -130,7 +130,7 @@ class Phase1 extends StatelessWidget {
                 ),
               ))
               .animate()
-                  .fade(delay: 100.ms)
+                  .fade(duration: 500.ms)
                   .slideX(begin: 1,end: 0),
         ),
 

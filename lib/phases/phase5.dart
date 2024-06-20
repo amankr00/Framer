@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:framer/phases/anime2.dart';
 
 class phase5 extends StatelessWidget {
   @override
@@ -37,7 +38,15 @@ class phase5 extends StatelessWidget {
                 child: RichText(
                     text: TextSpan(children: [
                   TextSpan(
-                    text: 'Collaborate ',
+                    text: 'Ensuring ',
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 3, 3, 4),
+                      fontSize: 50,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  TextSpan(
+                    text: 'legal ',
                     style: TextStyle(
                       color: Color(0xff008cf7),
                       fontSize: 50,
@@ -45,7 +54,23 @@ class phase5 extends StatelessWidget {
                     ),
                   ),
                   TextSpan(
-                    text: 'live on the canavas.',
+                    text: 'and ',
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 0, 0, 0),
+                      fontSize: 50,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  TextSpan(
+                    text: 'data security ',
+                    style: TextStyle(
+                      color:  Color(0xff008cf7),
+                      fontSize: 50,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  TextSpan(
+                    text: 'compliance',
                     style: TextStyle(
                       color: Color.fromARGB(255, 0, 0, 0),
                       fontSize: 50,
@@ -55,20 +80,66 @@ class phase5 extends StatelessWidget {
                 ]))),
             Padding(
               padding: EdgeInsetsDirectional.only(top: 30),
-              child: Container(
-                  // width: 425,
-                  // height : 120,
-                  width: MediaQuery.of(context).size.width * 0.4,
-                  // color : const Color.fromARGB(255, 227, 228, 227),
-                  child: Text(
-                    'Work with another designer, pull in a developer, or quickly give someone an overview of your design. Reap the rewards of fast feedback loops.',
-                    style: TextStyle(
-                      color: Color.fromARGB(255, 0, 0, 0),
-                      fontSize: 25,
-                      fontWeight: FontWeight.w500,
-                      decoration: TextDecoration.none,
-                    ),
-                  )),
+              child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Anime2(),
+                              Container(
+                                child: Text(
+                                  'Ensure legal and regulatory compliance.',
+                                  style: TextStyle(
+                                    // decoration: TextDecoration.lineThrough,
+                                    decoration: TextDecoration.none,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w500,
+                                    // decoration: TextDecoration.none,/
+                                    fontSize: 25,
+                                  ),
+                                ),
+                              ),
+                            ]),
+                        Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Anime2(),
+                          Container(
+                            child: Text(
+                              'Implement robust data protection measures.',
+                              style: TextStyle(
+                                // decoration: TextDecoration.lineThrough,
+                                decoration: TextDecoration.none,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500,
+                                // decoration: TextDecoration.none,/
+                                fontSize: 25,
+                              ),
+                            ),
+                          ),
+                        ]),
+                        Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                          children :[ 
+                          Anime2(),
+                          Container(
+                            child: Text(
+                              'Conduct regular security audits.',
+                              style: TextStyle(
+                                // decoration: TextDecoration.lineThrough,
+                                color: Colors.black,
+                                decoration: TextDecoration.none,
+                                fontWeight: FontWeight.w500,
+                                // decoration: TextDecoration.none,/
+                                fontSize: 25,
+                              ),
+                            ),
+                          ),
+                          ]
+                        ),
+                        
+                      ]),
             )
           ],
         )

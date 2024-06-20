@@ -56,6 +56,10 @@ class HomeMain extends StatelessWidget {
     startTimer();
     double pRt = MediaQuery.of(context).size.width;
     double pLt = MediaQuery.of(context).size.width;
+    // void pr(int prt)
+    // {
+    // print(prt);
+    // }
     if (type == "Mobile") {
       pRt = pRt * 0.02;
     } else if (type == "tablet") {
@@ -99,7 +103,7 @@ class HomeMain extends StatelessWidget {
 
             Container(
                 child: Text(
-              'Trusted by some of the best in the business', //,
+              'Trusted by some of the best in the business' , // $pRt'
               style: TextStyle(
                 fontSize: 17,
                 letterSpacing: 0,
