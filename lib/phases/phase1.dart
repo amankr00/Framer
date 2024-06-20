@@ -71,11 +71,90 @@ class Phase1 extends StatelessWidget {
 
                 Padding(
                   padding: EdgeInsets.only(top: 50),
-                  child: Container(
-                    width: 180,
-                    height: 50,
+                  child: HoverEffectExample().animate()
+                  .fade(delay : 100.ms)
+                  .slideX(begin: -5,end: 0),
+                )
+              ]),
+        ),
+
+        // Right Body
+
+        Padding(
+          padding: EdgeInsetsDirectional.fromSTEB(0, 30, pLt, 0),
+          
+          child: Container(
+              width: MediaQuery.of(context).size.width * 0.5,
+              height: MediaQuery.of(context).size.height * 0.7,
+              // width: 00,
+              // height:800,
+              // color: Colors.blue,
+              child: ClipRRect(
+                child: Image.asset(
+                  'assets/images/copy.png',
+                  width: MediaQuery.of(context).size.width * 0.5,
+                  // height: 650,
+                  fit: BoxFit.contain,
+                ),
+              ))
+              .animate()
+                  .fade(duration: 500.ms)
+                  .slideX(begin: 1,end: 0),
+        ),
+
+        //   Positioned(
+        //     top: 150,
+        //     left: -220,
+
+        //  child :  Container(
+        //   width: 470,
+        // height: 550,
+        // // color: Colors.blue,
+        //   child : ClipRect(
+        //   child : Image.asset('assets/images/emulator.png',
+        //   // height:600,
+        //   // width: 460,
+        //   fit: BoxFit.contain,)
+        //   )
+        //   ),
+        //   )
+
+        // )
+      ],
+    );
+  }
+}
+
+class HoverEffectExample extends StatefulWidget {
+  @override
+  _HoverEffectExampleState createState() => _HoverEffectExampleState();
+}
+
+class _HoverEffectExampleState extends State<HoverEffectExample> {
+  bool _isHovering = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+        child: MouseRegion(
+          onEnter: (event) => _updateHover(true),
+          onExit: (event) => _updateHover(false),
+          child : GestureDetector(
+           onTap: () {
+          showDialog(
+            context: context,
+            builder: (BuildContext context) {
+              return NameNumberDialog();
+            },
+          );
+        },
+          child: AnimatedContainer(
+            
+            duration: Duration(milliseconds: 200),
+            width: _isHovering ? 180 * 1.05 : 180,
+            height: _isHovering ? 50 * 1.05 : 50,
                     decoration: BoxDecoration(
-                      color: Colors.blue,
+                      color: _isHovering ? Colors.red:Colors.blue,
                       borderRadius: BorderRadius.circular(20),
                     ),
                     child: Row(
@@ -105,55 +184,64 @@ class Phase1 extends StatelessWidget {
                       ],
                     )
                     ,
-                  ).animate()
-                  .fade(delay : 100.ms)
-                  .slideX(begin: -5,end: 0),
-                )
-              ]),
+                  ),
+                  )
         ),
+      
+    );
+  }
 
-        // Right Body
+  void _updateHover(bool isHovering) {
+    setState(() {
+      _isHovering = isHovering;
+    });
+  }
+}
 
-        Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(0, 30, pLt, 0),
-          child : Anime4(),
-          // child: Container(
-          //     width: MediaQuery.of(context).size.width * 0.5,
-          //     height: MediaQuery.of(context).size.height * 0.7,
-          //     // width: 00,
-          //     // height:800,
-          //     // color: Colors.blue,
-          //     child: ClipRRect(
-          //       child: Image.asset(
-          //         'assets/images/copy.png',
-          //         width: MediaQuery.of(context).size.width * 0.5,
-          //         // height: 650,
-          //         fit: BoxFit.contain,
-          //       ),
-          //     ))
-          //     .animate()
-          //         .fade(duration: 500.ms)
-          //         .slideX(begin: 1,end: 0),
+
+class NameNumberDialog extends StatefulWidget {
+  @override
+  _NameNumberDialogState createState() => _NameNumberDialogState();
+}
+
+class _NameNumberDialogState extends State<NameNumberDialog> {
+  final TextEditingController _nameController = TextEditingController();
+  final TextEditingController _numberController = TextEditingController();
+
+  @override
+  Widget build(BuildContext context) {
+    return AlertDialog(
+      title: Text('Enter Name and Number'),
+      content: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+          TextField(
+            controller: _nameController,
+            decoration: InputDecoration(labelText: 'Name'),
+          ),
+          TextField(
+            controller: _numberController,
+            decoration: InputDecoration(labelText: 'Number'),
+            keyboardType: TextInputType.number,
+          ),
+        ],
+      ),
+      actions: <Widget>[
+        TextButton(
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          child: Text('Cancel'),
         ),
-
-        //   Positioned(
-        //     top: 150,
-        //     left: -220,
-
-        //  child :  Container(
-        //   width: 470,
-        // height: 550,
-        // // color: Colors.blue,
-        //   child : ClipRect(
-        //   child : Image.asset('assets/images/emulator.png',
-        //   // height:600,
-        //   // width: 460,
-        //   fit: BoxFit.contain,)
-        //   )
-        //   ),
-        //   )
-
-        // )
+        TextButton(
+          onPressed: () {
+            String name = _nameController.text;
+            String number = _numberController.text;
+            print('Name: $name, Number: $number');
+            Navigator.of(context).pop();
+          },
+          child: Text('Submit'),
+        ),
       ],
     );
   }

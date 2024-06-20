@@ -4,6 +4,8 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:framer/phases/anime2.dart';
 
 class phase2 extends StatelessWidget {
+  get context => null;
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -15,8 +17,7 @@ class phase2 extends StatelessWidget {
         // child:
         Padding(
           padding: const EdgeInsets.only(right: 70),
-          child: Container(
-              // color:Colors.black,
+          child : Container(
               width: MediaQuery.of(context).size.width * 0.4,
               child: ClipRect(
                   child: Image.asset(
@@ -25,6 +26,7 @@ class phase2 extends StatelessWidget {
                 // height: 750,
                 fit: BoxFit.contain,
               ))),
+              
         ),
         // ),
         Column(
@@ -122,3 +124,6 @@ class phase2 extends StatelessWidget {
     );
   }
 }
+
+
+

@@ -30,7 +30,7 @@ class _Anime4State extends State<Anime4> {
 
   Widget _buildUI() {
     return Container(
-    // width: MediaQuery.of(context).size.width * 1,
+    // width: MediaQuery.of(context).size.width * 0.35,
     width: 700,
     height :620,
     decoration: BoxDecoration(
