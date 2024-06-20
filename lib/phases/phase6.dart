@@ -47,66 +47,69 @@ class phase6 extends StatelessWidget {
                 //     )),
               ]))),
 
-               Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Anime2(),
-                              Container(
-                                child: Text(
-                                  'Develop timelines and project milestones.',
-                                  style: TextStyle(
-                                    // decoration: TextDecoration.lineThrough,
-                                    decoration: TextDecoration.none,
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.w500,
-                                    // decoration: TextDecoration.none,/
-                                    fontSize: 25,
+               Padding(
+                 padding: const EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
+                 child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Anime2(),
+                                Container(
+                                  child: Text(
+                                    'Develop timelines and project milestones.',
+                                    style: TextStyle(
+                                      // decoration: TextDecoration.lineThrough,
+                                      decoration: TextDecoration.none,
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w500,
+                                      // decoration: TextDecoration.none,/
+                                      fontSize: 25,
+                                    ),
                                   ),
                                 ),
-                              ),
-                            ]),
-                        Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Anime2(),
-                          Container(
-                            child: Text(
-                              'Allocate resources and assign tasks.',
-                              style: TextStyle(
-                                // decoration: TextDecoration.lineThrough,
-                                decoration: TextDecoration.none,
-                                color: Colors.black,
-                                fontWeight: FontWeight.w500,
-                                // decoration: TextDecoration.none,/
-                                fontSize: 25,
+                              ]),
+                          Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Anime2(),
+                            Container(
+                              child: Text(
+                                'Allocate resources and assign tasks.',
+                                style: TextStyle(
+                                  // decoration: TextDecoration.lineThrough,
+                                  decoration: TextDecoration.none,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w500,
+                                  // decoration: TextDecoration.none,/
+                                  fontSize: 25,
+                                ),
                               ),
                             ),
+                          ]),
+                          Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                            children :[ 
+                            Anime2(),
+                            Container(
+                              child: Text(
+                                'Estimate costs and create budgets.',
+                                style: TextStyle(
+                                  // decoration: TextDecoration.lineThrough,
+                                  color: Colors.black,
+                                  decoration: TextDecoration.none,
+                                  fontWeight: FontWeight.w500,
+                                  // decoration: TextDecoration.none,/
+                                  fontSize: 25,
+                                ),
+                              ),
+                            ),
+                            ]
                           ),
+                          
                         ]),
-                        Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                          children :[ 
-                          Anime2(),
-                          Container(
-                            child: Text(
-                              'Estimate costs and create budgets.',
-                              style: TextStyle(
-                                // decoration: TextDecoration.lineThrough,
-                                color: Colors.black,
-                                decoration: TextDecoration.none,
-                                fontWeight: FontWeight.w500,
-                                // decoration: TextDecoration.none,/
-                                fontSize: 25,
-                              ),
-                            ),
-                          ),
-                          ]
-                        ),
-                        
-                      ]),
+               ),
 
 
 
