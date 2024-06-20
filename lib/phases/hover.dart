@@ -53,7 +53,7 @@ class _IconWithHoverEffectState extends State<IconWithHoverEffect> {
         duration: Duration(milliseconds: 300),
         curve: Curves.easeInOut,
         transform: _isHovered
-            ? Matrix4.diagonal3Values(1.3, 1.3, 1.5)
+            ? Matrix4.diagonal3Values(1.2, 1.2, -0.01)
             : Matrix4.identity(),
         child: Container(
         width: MediaQuery.of(context).size.width * 0.025,

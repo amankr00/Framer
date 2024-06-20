@@ -93,11 +93,14 @@ class phase2 extends StatelessWidget {
                       children: [
                         Row(
                             mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Anime2(),
+                              // Anime2(),
                               Container(
+                              width: 450,
+                              height: MediaQuery.of(context).size.height * 0.3,
                                 child: Text(
-                                  'Meet clients, define project goals.',
+                                  'App development companies begin by meeting clients to understand their needs and project goals. They conduct feasibility studies to assess viability, define project scope, and create detailed requirement specifications for clarity and alignment.',
                                   style: TextStyle(
                                     // decoration: TextDecoration.lineThrough,
                                     decoration: TextDecoration.none,
@@ -109,43 +112,7 @@ class phase2 extends StatelessWidget {
                                 ),
                               ),
                             ]),
-                        Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Anime2(),
-                          Container(
-                            child: Text(
-                              'Conduct feasibility studies, define scope.',
-                              style: TextStyle(
-                                // decoration: TextDecoration.lineThrough,
-                                decoration: TextDecoration.none,
-                                color: Colors.black,
-                                fontWeight: FontWeight.w500,
-                                // decoration: TextDecoration.none,/
-                                fontSize: 25,
-                              ),
-                            ),
-                          ),
-                        ]),
-                        Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                          children :[ 
-                          Anime2(),
-                          Container(
-                            child: Text(
-                              'Create detailed requirement specifications.',
-                              style: TextStyle(
-                                // decoration: TextDecoration.lineThrough,
-                                color: Colors.black,
-                                decoration: TextDecoration.none,
-                                fontWeight: FontWeight.w500,
-                                // decoration: TextDecoration.none,/
-                                fontSize: 25,
-                              ),
-                            ),
-                          ),
-                          ]
-                        ),
+                      
                         
                       ]),
                 ))

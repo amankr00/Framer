@@ -78,7 +78,7 @@ class HomeMain extends StatelessWidget {
     return SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             // Button(),
             // zero(),
@@ -87,15 +87,10 @@ class HomeMain extends StatelessWidget {
             // Navbar
             navbar(),
 
-            
-            
-          
-          // Text('data')
-          // .animate()
-          // .fade(duration: 1500.ms)
-          // .slideX(begin: -5,end: 0),
-
-            
+            // Text('data')
+            // .animate()
+            // .fade(duration: 1500.ms)
+            // .slideX(begin: -5,end: 0),
 
             // Lower Body  -> 1st phase
 
@@ -103,7 +98,7 @@ class HomeMain extends StatelessWidget {
 
             Container(
                 child: Text(
-              'Trusted by some of the best in the business' , // $pRt'
+              'Trusted by some of the best in the business', //$pRt'
               style: TextStyle(
                 fontSize: 17,
                 letterSpacing: 0,
@@ -111,32 +106,28 @@ class HomeMain extends StatelessWidget {
                 decoration: TextDecoration.none,
                 color: Color.fromARGB(235, 101, 100, 100),
               ),
-            )
-            ).animate()
-                  .fade(delay: 100.ms)
-                  .slideY(begin: -100,end: 0),
-                  // .shake(),
-                  
+            )).animate().fade(delay: 100.ms).slideY(begin: -100, end: 0),
+            // .shake(),
 
             SizedBox(
               height: 50,
             ),
 
-            // Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-            //   iconDesign('IRIS APP', 'assets/images/iris.png'),
-            //   iconDesign('TaskFlow App', 'assets/images/taskflow.png'),
-            //   iconDesign('Samadhan App', 'assets/images/samadhan.png'),
-            //   iconDesign('Maa App', 'assets/images/maa.png'),
-            //   iconDesign('Samaksh', 'assets/images/samaksh.png'),
-            //   iconDesign('Home Insights', 'assets/images/home.png'),
-            //   iconDesign('Shravani', 'assets/images/shravani.png'),
-            //   iconDesign('Prathmikta', 'assets/images/prathmikta.png'),
-            //   iconDesign('DakPad', 'assets/images/da.png'),
-            // ])
-            App()
-            .animate()
-                  .fade(delay: 100.ms)
-                  .slideY(begin: 1,end: 0),
+            Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+              IconItem('IRIS APP', 'assets/images/iris.png'),
+              IconItem('TaskFlow App', 'assets/images/taskflow.png'),
+              IconItem('Samadhan App', 'assets/images/samadhan.png'),
+              IconItem('Maa App', 'assets/images/maa.png'),
+              IconItem('Samaksh', 'assets/images/samaksh.png'),
+              IconItem('Home Insights', 'assets/images/home.png'),
+              IconItem('Shravani', 'assets/images/shravani.png'),
+              IconItem('Prathmikta', 'assets/images/prathmikta.png'),
+              IconItem('DakPad', 'assets/images/da.png'),
+            ]),
+            // App()
+            // .animate()
+            //       .fade(delay: 100.ms)
+            //       .slideY(begin: 1,end: 0),
 
             SizedBox(
               height: 70,
@@ -176,38 +167,51 @@ class HomeMain extends StatelessWidget {
 
     // final controller = PageController(initialPage: 1);
   }
+}
 
-  Container iconDesign(String appName, String imageURL) {
-    return Container(
-      width: 120,
-      child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Container(
-                child: ClipRect(
-                    child: Image.asset(
-              imageURL,
-              height: 48,
-              width: 48,
+class IconItem extends StatefulWidget {
+  final String appName;
+  final String imageUrl;
+  IconItem(this.appName, this.imageUrl);
+
+  @override
+  _IconItemState createState() => _IconItemState(imageUrl);
+}
+
+class _IconItemState extends State<IconItem> {
+  bool _isHovered = false;
+  final String imageUrl;
+
+  _IconItemState(this.imageUrl);
+
+  @override
+  Widget build(BuildContext context) {
+    return MouseRegion(
+      onEnter: (_) {
+        setState(() {
+          _isHovered = true;
+        });
+      },
+      onExit: (_) {
+        setState(() {
+          _isHovered = false;
+        });
+      },
+      child: AnimatedContainer(
+        duration: Duration(milliseconds: 300),
+        curve: Curves.easeInOut,
+        transform: Matrix4.identity()..scale(_isHovered ? 1.4 : 1.0),
+        transformAlignment: Alignment.center,
+        child: Container(
+            width: 100,
+            //alignment: Alignment.center,
+            child: ClipRect(
+                child: Image.asset(
+              imageUrl,
+              height: 40,
+              width: 40,
             ))),
-            // Padding(
-            //   padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
-            //   child: Text(
-            //     appName,
-            //     style: GoogleFonts.robotoMono(
-            //       textStyle: TextStyle(
-            //         fontSize: 14,
-            //         letterSpacing: 0,
-            //         fontWeight: FontWeight.normal,
-            //         decoration: TextDecoration.none,
-            //         color: const Color.fromARGB(255, 0, 0, 0),
-            //       ),
-            //     ),
-            //   ),
-            // ),
-          ]),
+      ),
     );
   }
-  
 }
