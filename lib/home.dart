@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:framer/phases/anime3.dart';
 import 'package:framer/phases/button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -77,92 +78,103 @@ class HomeMain extends StatelessWidget {
 
     return SingleChildScrollView(
         scrollDirection: Axis.vertical,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            // Button(),
-            // zero(),
-            // AnimatedTextExample(),
-            // para(initialText: 'Hello, Starkiee!'),
-            // Navbar
-            navbar(),
+        child: Stack(
+          children :[ 
+          Anime3(),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              // Button(),
+              // zero(),
+              // AnimatedTextExample(),
+              // para(initialText: 'Hello, Starkiee!'),
+          
+              
+              // Navbar
+              navbar(),
+          
+              // Text('data')
+              // .animate()
+              // .fade(duration: 1500.ms)
+              // .slideX(begin: -5,end: 0),
+          
+              // Lower Body  -> 1st phase
+          
+              Phase1(pRt, pLt),
 
-            // Text('data')
-            // .animate()
-            // .fade(duration: 1500.ms)
-            // .slideX(begin: -5,end: 0),
-
-            // Lower Body  -> 1st phase
-
-            Phase1(pRt, pLt),
-
-            Container(
-                child: Text(
-              'Trusted by some of the best in the business', //$pRt'
-              style: TextStyle(
-                fontSize: 17,
-                letterSpacing: 0,
-                fontWeight: FontWeight.w600,
-                decoration: TextDecoration.none,
-                color: Color.fromARGB(235, 101, 100, 100),
+              SizedBox(
+              height: 20,),
+          
+              Container(
+                  child: Text(
+                'Trusted by some of the best in the business', //$pRt'
+                style: TextStyle(
+                  fontSize: 17,
+                  letterSpacing: 0,
+                  fontWeight: FontWeight.w600,
+                  decoration: TextDecoration.none,
+                  color: Color.fromARGB(235, 101, 100, 100),
+                ),
+              )).animate().fade(delay: 100.ms).slideY(begin: -100, end: 0),
+              // .shake(),
+          
+              SizedBox(
+                height: 50,
               ),
-            )).animate().fade(delay: 100.ms).slideY(begin: -100, end: 0),
-            // .shake(),
-
-            SizedBox(
-              height: 50,
-            ),
-
-            Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-              IconItem('IRIS APP', 'assets/images/iris.png'),
-              IconItem('TaskFlow App', 'assets/images/taskflow.png'),
-              IconItem('Samadhan App', 'assets/images/samadhan.png'),
-              IconItem('Maa App', 'assets/images/maa.png'),
-              IconItem('Samaksh', 'assets/images/samaksh.png'),
-              IconItem('Home Insights', 'assets/images/home.png'),
-              IconItem('Shravani', 'assets/images/shravani.png'),
-              IconItem('Prathmikta', 'assets/images/prathmikta.png'),
-              IconItem('DakPad', 'assets/images/da.png'),
-            ]),
-            // App()
-            // .animate()
-            //       .fade(delay: 100.ms)
-            //       .slideY(begin: 1,end: 0),
-
-            SizedBox(
-              height: 70,
-            ),
-
-            // Phase 2
-
-            phase2(),
-
-            // 3rd phase
-
-            phase3(),
-
-            // 4th phase
-            Padding(
-                padding: EdgeInsets.only(top: 100),
-                child: Container(
-                    height: 450,
-                    color: Color.fromRGBO(243, 239, 239, 0.561),
-                    child: Phase4Viewer())),
-
-            // 5th phase
-
-            Padding(
-              padding: const EdgeInsets.only(top: 100),
-              child: phase5(),
-            ),
-
-            Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0, 100, 0, 100),
-              child: phase6(),
-            ),
-
-            phase7(),
-          ],
+          
+              Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                IconItem('IRIS APP', 'assets/images/iris.png'),
+                IconItem('TaskFlow App', 'assets/images/taskflow.png'),
+                IconItem('Samadhan App', 'assets/images/samadhan.png'),
+                IconItem('Maa App', 'assets/images/maa.png'),
+                IconItem('Samaksh', 'assets/images/samaksh.png'),
+                IconItem('Home Insights', 'assets/images/home.png'),
+                IconItem('Shravani', 'assets/images/shravani.png'),
+                IconItem('Prathmikta', 'assets/images/prathmikta.png'),
+                IconItem('DakPad', 'assets/images/da.png'),
+              ]),
+              // App()
+              // .animate()
+              //       .fade(delay: 100.ms)
+              //       .slideY(begin: 1,end: 0),
+          
+              SizedBox(
+                height: 70,
+              ),
+          
+              // Phase 2
+          
+              phase2(),
+          
+              // 3rd phase
+          
+              phase3(),
+          
+              // 4th phase
+              Padding(
+                  padding: EdgeInsets.only(top: 100),
+                  child: Container(
+                      height: 450,
+                      color: Color.fromRGBO(243, 239, 239, 0.561),
+                      child: Phase4Viewer())),
+          
+              // 5th phase
+          
+              Padding(
+                padding: const EdgeInsets.only(top: 100),
+                child: phase5(),
+              ),
+          
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 100, 0, 100),
+                child: phase6(),
+              ),
+          
+              phase7(),
+            ],
+          ),
+          
+          ]
         ));
 
     // final controller = PageController(initialPage: 1);

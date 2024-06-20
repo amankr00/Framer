@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:framer/navbar/navbar.dart';
+import 'package:framer/phases/anime4.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Phase1 extends StatelessWidget {
@@ -115,23 +116,24 @@ class Phase1 extends StatelessWidget {
 
         Padding(
           padding: EdgeInsetsDirectional.fromSTEB(0, 30, pLt, 0),
-          child: Container(
-              width: MediaQuery.of(context).size.width * 0.5,
-              height: MediaQuery.of(context).size.height * 0.7,
-              // width: 00,
-              // height:800,
-              // color: Colors.blue,
-              child: ClipRRect(
-                child: Image.asset(
-                  'assets/images/copy.png',
-                  width: MediaQuery.of(context).size.width * 0.5,
-                  // height: 650,
-                  fit: BoxFit.contain,
-                ),
-              ))
-              .animate()
-                  .fade(duration: 500.ms)
-                  .slideX(begin: 1,end: 0),
+          child : Anime4(),
+          // child: Container(
+          //     width: MediaQuery.of(context).size.width * 0.5,
+          //     height: MediaQuery.of(context).size.height * 0.7,
+          //     // width: 00,
+          //     // height:800,
+          //     // color: Colors.blue,
+          //     child: ClipRRect(
+          //       child: Image.asset(
+          //         'assets/images/copy.png',
+          //         width: MediaQuery.of(context).size.width * 0.5,
+          //         // height: 650,
+          //         fit: BoxFit.contain,
+          //       ),
+          //     ))
+          //     .animate()
+          //         .fade(duration: 500.ms)
+          //         .slideX(begin: 1,end: 0),
         ),
 
         //   Positioned(

@@ -19,16 +19,16 @@ class phase3 extends StatelessWidget {
                 // height: 300,
                 child: RichText(
                     text: TextSpan(children: [
+                  // TextSpan(
+                  //   text: 'Strategizing timelines, ',
+                  //   style: TextStyle(
+                  //     color: const Color.fromARGB(255, 3, 3, 3),
+                  //     fontSize: 50,
+                  //     fontWeight: FontWeight.bold,
+                  //   ),
+                  // ),
                   TextSpan(
-                    text: 'Strategizing timelines, ',
-                    style: TextStyle(
-                      color: const Color.fromARGB(255, 3, 3, 3),
-                      fontSize: 50,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  TextSpan(
-                    text: 'allocating resources, ',
+                    text: 'Allocating resources and ',
                     style: TextStyle(
                       color: const Color.fromARGB(255, 3, 3, 3),
                       fontSize: 50,

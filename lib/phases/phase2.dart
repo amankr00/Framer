@@ -54,7 +54,7 @@ class phase2 extends StatelessWidget {
                     text: TextSpan(
                       children: [
                         TextSpan(
-                          text: 'Thoroughly analyzing ',
+                          text: 'Analyzing ',
                           style: TextStyle(
                             color: const Color.fromARGB(255, 3, 3, 3),
                             fontSize: 50,
@@ -100,7 +100,7 @@ class phase2 extends StatelessWidget {
                               width: 450,
                               height: MediaQuery.of(context).size.height * 0.3,
                                 child: Text(
-                                  'App development companies begin by meeting clients to understand their needs and project goals. They conduct feasibility studies to assess viability, define project scope, and create detailed requirement specifications for clarity and alignment.',
+                                  'We begin by meeting clients to understand their needs and project goals. They conduct feasibility studies to assess viability, define project scope, and create detailed requirement specifications for clarity and alignment.',
                                   style: TextStyle(
                                     // decoration: TextDecoration.lineThrough,
                                     decoration: TextDecoration.none,
