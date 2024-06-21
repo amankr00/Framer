@@ -38,7 +38,7 @@ class _Anime3State extends State<Anime3> {
       // controller: _controller,
       // width: 20,
       // height: 20,
-      repeat: true,
+      repeat: false,
       fit: BoxFit.contain,
     ));
   }
