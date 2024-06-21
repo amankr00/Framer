@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:framer/navbar/navbar.dart';
 import 'package:framer/phases/anime4.dart';
+import 'package:framer/phases/subs.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Phase1 extends StatelessWidget {
@@ -179,16 +180,16 @@ class _HoverEffectExampleState extends State<HoverEffectExample> {
         // clipBehavior: Clip.hardEdge,
         children: [
           // Text("hello"),
-          
+
           Container(
             width: MediaQuery.of(context).size.width * 0.70,
             height: MediaQuery.of(context).size.height * 0.70,
             color: Colors.purple,
             child: Stack(children: [
-            Container(
-              width: MediaQuery.of(context).size.width * 0.70,
-              height: MediaQuery.of(context).size.height * 0.70,
-              color: Colors.white),
+              Container(
+                  width: MediaQuery.of(context).size.width * 0.70,
+                  height: MediaQuery.of(context).size.height * 0.70,
+                  color: Colors.white),
               Positioned(
                 left: 0,
                 bottom: 0,
@@ -257,34 +258,67 @@ class _HoverEffectExampleState extends State<HoverEffectExample> {
                           child: Image.asset('assets/images/lowlogo2.png'),
                         ),
                       ),
+                      SizedBox(
+                      height: MediaQuery.of(context).size.width * 0.01,),
                       Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 20),
+                        padding: EdgeInsets.symmetric(horizontal: 40),
                         child: Container(
-                          width: 300,
+                         width: MediaQuery.of(context).size.width * 0.25,
                           child: Card(
-                            child : Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 20),
-                          child: Container(
-                            child: TextField(
-                              controller: _nameController,
-                              decoration: InputDecoration(
-                                hintText: 'Search openings',
-                                hintStyle: TextStyle(
-                                  color: Color(0xFF7E7E7E),
-                                  letterSpacing: 0,
+                            child: Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 20),
+                              child: Container(
+                                child: TextField(
+                                  controller: _nameController,
+                                  decoration: InputDecoration(
+                                    hintText: 'Name',
+                                    hintStyle: TextStyle(
+                                      color: Color(0xFF7E7E7E),
+                                      letterSpacing: 0,
+                                    ),
+                                    border: InputBorder.none,
+                                  ),
                                 ),
-                                border: InputBorder.none,
                               ),
-                              
                             ),
                           ),
                         ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 20),
+                        child: Container(
+                          width: MediaQuery.of(context).size.width * 0.25,
+                          child: Card(
+                            child: Padding(
+                              padding: EdgeInsets.symmetric(horizontal: 20),
+                              child: Container(
+                                child: TextField(
+                                  controller: _numberController,
+                                  decoration: InputDecoration(
+                                    hintText: 'Number',
+                                    hintStyle: TextStyle(
+                                      color: Color(0xFF7E7E7E),
+                                      letterSpacing: 0,
+                                    ),
+                                    border: InputBorder.none,
+                                  ),
+                                ),
+                              ),
+                            ),
                           ),
                         ),
                       ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 20),
+                        child: Container(
+                            width: MediaQuery.of(context).size.width * 0.15,
+                            height: MediaQuery.of(context).size.height * 0.07,
+                          // color: Color.fromARGB(255, 30, 169, 229),
+                              child: HoverCard(),
+                            )),
+                      
                     ],
                   )),
-              
             ]),
           ),
 
