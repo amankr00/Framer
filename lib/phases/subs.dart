@@ -23,7 +23,7 @@ class _HoverCardState extends State<HoverCard> {
       },
       child: Card(
         color: _isHovering
-            ? Color.fromARGB(255, 11, 160, 171) // Hover color
+            ? Color.fromARGB(255, 13, 196, 209) // Hover color
             : Color.fromARGB(255, 0, 238, 255), // Default color
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 20),

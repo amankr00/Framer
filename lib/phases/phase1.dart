@@ -255,7 +255,7 @@ class _HoverEffectExampleState extends State<HoverEffectExample> {
                       Container(
                         height: MediaQuery.of(context).size.height * 0.20,
                         child: ClipRect(
-                          child: Image.asset('assets/images/lowlogo2.png'),
+                          child: Image.asset('assets/images/lg.png'),
                         ),
                       ),
                       SizedBox(
