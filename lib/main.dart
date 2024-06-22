@@ -4,7 +4,7 @@ import 'package:gif_view/gif_view.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
-WidgetsFlutterBinding.ensureInitialized();
+// WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 

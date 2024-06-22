@@ -21,27 +21,28 @@ class _HoverCardState extends State<HoverCard> {
           _isHovering = false;
         });
       },
-      child: Card(
-        color: _isHovering
-            ? Color.fromARGB(255, 13, 196, 209) // Hover color
-            : Color.fromARGB(255, 0, 238, 255), // Default color
-        child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20),
-          child: Container(
-            height: MediaQuery.of(context).size.height * 0.045,
-            alignment: Alignment.center,
-            child: Text(
-              'Subscribe',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 15,
+  
+      child: Material(
+            elevation: 4,
+            borderRadius: BorderRadius.circular(
+                50), // Optional: to make the corners rounded
+            child: Container(
+              height: MediaQuery.of(context).size.height * 0.045,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                color: _isHovering? Color.fromARGB(184, 31, 210, 219):Color.fromARGB(214, 39, 222, 210), // Background color for the container
+                borderRadius: BorderRadius.circular(
+                    50), // Match the borderRadius of the Material widget
               ),
-            ),
+              child: Text(
+                'Subscribe',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                ),
+              ),
           ),
-        ),
-      ),
+          )
     );
   }
 }
-
-

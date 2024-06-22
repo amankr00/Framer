@@ -14,6 +14,7 @@ class Phase1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+    
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         // left body
@@ -259,64 +260,66 @@ class _HoverEffectExampleState extends State<HoverEffectExample> {
                         ),
                       ),
                       SizedBox(
-                      height: MediaQuery.of(context).size.width * 0.01,),
-                      Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 40),
-                        child: Container(
-                         width: MediaQuery.of(context).size.width * 0.25,
-                          child: Card(
-                            child: Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 20),
-                              child: Container(
-                                child: TextField(
-                                  controller: _nameController,
-                                  decoration: InputDecoration(
-                                    hintText: 'Name',
-                                    hintStyle: TextStyle(
-                                      color: Color(0xFF7E7E7E),
-                                      letterSpacing: 0,
-                                    ),
-                                    border: InputBorder.none,
-                                  ),
-                                ),
+                        height: MediaQuery.of(context).size.width * 0.01,
+                      ),
+                     
+                    
+                      Container(
+                      width: MediaQuery.of(context).size.width * 0.25,
+                      child : Material(
+                        elevation: 3,
+                        borderRadius: BorderRadius.circular(10),
+                        child: Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 20),
+                          child: TextField(
+                            controller: _numberController,
+                            decoration: InputDecoration(
+                              hintText: 'Name',
+                              hintStyle: TextStyle(
+                                color: Color(0xFF7E7E7E),
+                                letterSpacing: 0,
                               ),
+                              border: InputBorder.none,
                             ),
                           ),
                         ),
                       ),
-                      Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 20),
-                        child: Container(
-                          width: MediaQuery.of(context).size.width * 0.25,
-                          child: Card(
-                            child: Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 20),
-                              child: Container(
-                                child: TextField(
-                                  controller: _numberController,
-                                  decoration: InputDecoration(
-                                    hintText: 'Number',
-                                    hintStyle: TextStyle(
-                                      color: Color(0xFF7E7E7E),
-                                      letterSpacing: 0,
-                                    ),
-                                    border: InputBorder.none,
-                                  ),
-                                ),
+                      ),
+                      SizedBox(
+                        height: MediaQuery.of(context).size.width * 0.008,
+                      ),
+                      Container(
+                      width: MediaQuery.of(context).size.width * 0.25,
+                      child : Material(
+                        elevation: 3,
+                        borderRadius: BorderRadius.circular(10),
+                        child: Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 20),
+                          child: TextField(
+                            controller: _numberController,
+                            decoration: InputDecoration(
+                              hintText: 'Number',
+                              hintStyle: TextStyle(
+                                color: Color(0xFF7E7E7E),
+                                letterSpacing: 0,
                               ),
+                              border: InputBorder.none,
                             ),
                           ),
                         ),
                       ),
+                      ),
+                      SizedBox(
+                        height: MediaQuery.of(context).size.width * 0.008,
+                      ),
                       Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 20),
-                        child: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 20),
+                          child: Container(
                             width: MediaQuery.of(context).size.width * 0.15,
                             height: MediaQuery.of(context).size.height * 0.07,
-                          // color: Color.fromARGB(255, 30, 169, 229),
-                              child: HoverCard(),
-                            )),
-                      
+                            // color: Color.fromARGB(255, 30, 169, 229),
+                            child: HoverCard(),
+                          )),
                     ],
                   )),
             ]),

@@ -32,7 +32,7 @@ class navbar extends StatelessWidget {
             ),
             Container(
               // Navbar Open Framer
-              width: 190,
+              width: MediaQuery.of(context).size.width * 0.11,
               height: 50,
 
               decoration: BoxDecoration(
