@@ -273,13 +273,13 @@ class _HoverEffectExampleState extends State<HoverEffectExample> {
                     Container(
                       width: MediaQuery.of(context).size.width * 0.20,
                       child: Material(
-                        elevation: 3,
+                        // elevation: 3,
                         borderRadius: BorderRadius.circular(60),
                         color: Color(0xffEFF4FA),
                         child: Padding(
                           padding: EdgeInsets.symmetric(horizontal: 20),
                           child: TextField(
-                            controller: _numberController,
+                            controller: _nameController,
                             textAlign: TextAlign.center,
                              decoration: InputDecoration(
                               hintText: 'Enter your name',
@@ -301,7 +301,7 @@ class _HoverEffectExampleState extends State<HoverEffectExample> {
                     Container(
                       width: MediaQuery.of(context).size.width * 0.20,
                       child: Material(
-                        elevation: 3,
+                        // elevation: 3,
                         borderRadius: BorderRadius.circular(60),
                         color: Color(0xffEFF4FA),
                         child: Padding(
