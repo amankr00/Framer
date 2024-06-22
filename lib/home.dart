@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:framer/phases/anime.dart';
 import 'package:framer/phases/hover.dart';
 import 'package:framer/phases/paraPassing.dart';
+import 'package:framer/phases/t.dart';
 import 'package:framer/phases/testAnimate.dart';
 import 'package:lottie/lottie.dart';
 import 'package:framer/navbar/navbar.dart';
@@ -82,6 +83,7 @@ class HomeMain extends StatelessWidget {
           children :[ 
           Anime3(),
           // App2(),
+          // PopupWidget(),
           Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [

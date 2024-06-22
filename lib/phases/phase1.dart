@@ -283,7 +283,7 @@ class _HoverEffectExampleState extends State<HoverEffectExample> {
                         child: Padding(
                           padding: EdgeInsets.symmetric(horizontal: 20),
                           child: TextField(
-                            controller: _numberController,
+                            controller: _nameController,
                             decoration: InputDecoration(
                               hintText: 'Name',
                               hintStyle: TextStyle(
