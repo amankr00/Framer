@@ -1,65 +1,48 @@
 import 'package:flutter/material.dart';
 
-class HoverCard extends StatefulWidget {
-// String Name;
-// String Number;
 
-//   HoverCard(String Name, String Number);
+class My extends StatelessWidget {
+  My(this._nameController, this._numberController);
   
-  
+  final TextEditingController _nameController ;
+  final TextEditingController _numberController;
 
-  @override
-  _HoverCardState createState() => _HoverCardState();
-}
+  void _showToast1(BuildContext context, {required String data}) {
+    // Create a SnackBar
+    final snackBar = SnackBar(
+      content: Text('This is a Snackbar: $_nameController !'),
+      // action: SnackBarAction(
+      //   label: 'Undo',
+      //   onPressed: () {
+      //     // Some code to undo the change.
+      //   },
+      // ),
+    );
 
-class _HoverCardState extends State<HoverCard> {
-  bool _isHovering = false;
-  // final String Name;
-  // final String Number;
-  // _HoverCardState(this.Name, this.Number);
-
-  // SecondScreen({required this.dataFromFirst});
-
+    // Use the ScaffoldMessenger to show the SnackBar
+    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+  }
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-    
-    home: Container(
-    width: 400,
-    height: 40,
-      child: Scaffold(
-              body: Builder(builder: (context) {
-              return Center(
-                child: ElevatedButton(onPressed: () {
-                final message = SnackBar(content: Text("This is snackbar"));
-                ScaffoldMessenger.of(context).showSnackBar(message);
-                }, child: Text('Click Me')));
-          }     
-            ) 
-      ),
-    )
+    return GestureDetector(
+          onTap: () {
+            _showToast1(context, data: 'Stark');
+          },
+          child: Container(
+            padding: EdgeInsets.symmetric(vertical: 12.0, horizontal: 24.0),
+            decoration: BoxDecoration(
+              color: Colors.blue,
+              borderRadius: BorderRadius.circular(8.0),
+            ),
+            child: Text(
+              'Subscribe',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 16.0,
+              ),
+            ),
+          ),
     );
   }
-
-  // void print(){
-  // print('Heelo');}
-
-
 }
-          //   body: Container(
-          //     height: MediaQuery.of(context).size.height * 0.045,
-          //     alignment: Alignment.center,
-          //     decoration: BoxDecoration(
-          //       color: _isHovering? Color.fromARGB(183, 18, 125, 131):Color.fromARGB(214, 39, 222, 210), // Background color for the container
-          //       borderRadius: BorderRadius.circular(
-          //           50), // Match the borderRadius of the Material widget
-          //     ),
-          //     child: Text(
-          //       'Subscribe',
-          //       style: TextStyle(
-          //         color: Color.fromARGB(255, 213, 47, 47),
-          //         fontSize: 20,
-          //       ),
-          //     ),
-          // ),

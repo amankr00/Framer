@@ -25,7 +25,29 @@ import 'package:gif_view/gif_view.dart';
 import 'package:get/get.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
-class HomeMain extends StatelessWidget {
+// class IconItem extends StatefulWidget {
+//   final String appName;
+//   final String imageUrl;
+//   IconItem(this.appName, this.imageUrl);
+
+//   @override
+//   _IconItemState createState() => _IconItemState(imageUrl);
+// }
+
+// class _IconItemState extends State<IconItem> {
+//   bool _isHovered = false;
+//   final String imageUrl;
+
+//   _IconItemState(this.imageUrl);
+
+//   @override
+
+class HomeMain extends StatefulWidget{
+  @override
+  _HomeMainState createState() => _HomeMainState();
+}
+
+class _HomeMainState extends State<HomeMain> {
   final PageController controller = PageController(initialPage: 1);
   Timer? timer;
 
@@ -95,6 +117,7 @@ class HomeMain extends StatelessWidget {
               
               // Navbar
               navbar(),
+              // MyHomePage(),
               
               // Text('data')
               // .animate()
