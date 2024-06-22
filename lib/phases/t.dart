@@ -1,34 +1,45 @@
 import 'package:flutter/material.dart';
 
+class Page1 extends StatefulWidget {
+  @override
+  _Page1State createState() => _Page1State();
+}
 
+class _Page1State extends State<Page1> {
+  final TextEditingController _nameController = TextEditingController();
 
+  @override
+  // void dispose() {
+  //   _nameController.dispose();
+  //   super.dispose();
+  // }
 
+  void _printValue() {
+    print('Entered value: ${_nameController.text}');
+  }
 
-class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Text('Flutter Snackbar Demo'),
-      // ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            // Create a SnackBar
-            final snackBar = SnackBar(
-              content: Text('This is a Snackbar!'),
-              action: SnackBarAction(
-                label: 'Undo',
-                onPressed: () {
-                  // Code to execute when the action is pressed
-                },
+      appBar: AppBar(
+        title: Text('TextEditingController Example'),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          children: [
+            TextField(
+              controller: _nameController,
+              decoration: InputDecoration(
+                labelText: 'Enter your name',
               ),
-            );
-
-            // Display the SnackBar
-            ScaffoldMessenger.of(context).showSnackBar(snackBar);
-          },
-          child: Text('Show Snackbar'),
+            ),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: _printValue,
+              child: Text('Print Value'),
+            ),
+          ],
         ),
       ),
     );

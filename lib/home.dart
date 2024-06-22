@@ -1,28 +1,18 @@
 import 'dart:async';
 import 'package:framer/phases/anime3.dart';
-import 'package:framer/phases/button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:framer/phases/anime.dart';
-import 'package:framer/phases/hover.dart';
-import 'package:framer/phases/paraPassing.dart';
-import 'package:framer/phases/t.dart';
-import 'package:framer/phases/testAnimate.dart';
-import 'package:lottie/lottie.dart';
 import 'package:framer/navbar/navbar.dart';
-import 'package:framer/phases/phase1.dart';
 import 'package:framer/phases/phase2.dart';
 import 'package:framer/phases/phase3.dart';
-import 'package:framer/phases/phase4.dart';
 import 'package:framer/phases/phase4Viewer.dart';
+import 'package:framer/phases/phase1.dart';
+import 'package:framer/phases/t.dart';
 import 'package:framer/phases/phase5.dart';
 import 'package:framer/phases/phase6.dart';
 import 'package:framer/phases/phase7.dart';
-import 'package:provider/provider.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:framer/phases/t.dart';
 import 'package:responsive_builder/responsive_builder.dart';
-import 'package:gif_view/gif_view.dart';
-import 'package:get/get.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
 // class IconItem extends StatefulWidget {
@@ -117,6 +107,7 @@ class _HomeMainState extends State<HomeMain> {
               
               // Navbar
               navbar(),
+              
               // MyHomePage(),
               
               // Text('data')
@@ -125,6 +116,7 @@ class _HomeMainState extends State<HomeMain> {
               // .slideX(begin: -5,end: 0),
           
               // Lower Body  -> 1st phase
+              // Page1(),
           
               Phase1(pRt, pLt),
 
