@@ -18,12 +18,16 @@ class Phase1 extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         // left body
-
+        Flexible(
+        flex: 2,
+        child:
         Padding(
           padding: EdgeInsetsDirectional.fromSTEB(pRt, 0, 0, 0),
-          child: Column(
+          child: 
+          Column(
               // mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.start,
+              // mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 // Container(height:50),
                 Padding(
@@ -76,10 +80,14 @@ class Phase1 extends StatelessWidget {
                       .slideX(begin: -5, end: 0),
                 )
               ]),
-        ),
+              ),
+              ),
+        
 
         // Right Body
-
+        Flexible(
+        flex : 1,
+        child:
         Padding(
           padding: EdgeInsetsDirectional.fromSTEB(0, 30, pLt, 0),
           child: Container(
@@ -91,12 +99,13 @@ class Phase1 extends StatelessWidget {
               child: ClipRRect(
                 child: Image.asset(
                   'assets/images/copy.png',
-                  width: MediaQuery.of(context).size.width * 0.5,
+                  // width: MediaQuery.of(context).size.width * 0.5,
                   // height: 650,
-                  fit: BoxFit.contain,
+                  fit: BoxFit.cover,
                 ),
               )).animate().fade(duration: 500.ms).slideX(begin: 1, end: 0),
         ),
+        )
       ],
     );
   }
@@ -115,8 +124,9 @@ class _HoverEffectExampleState extends State<HoverEffectExample> {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: MouseRegion(
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children : [ MouseRegion(
           onEnter: (event) => _updateHover(true),
           onExit: (event) => _updateHover(false),
           child: GestureDetector(
@@ -169,6 +179,7 @@ class _HoverEffectExampleState extends State<HoverEffectExample> {
               ),
             ),
           )),
+          ]
     );
   }
 

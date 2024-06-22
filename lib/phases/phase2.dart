@@ -11,26 +11,35 @@ class phase2 extends StatelessWidget {
     return Row(
       // Purple image and Right - side text
       mainAxisAlignment: MainAxisAlignment.spaceAround,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         // Padding(
         //   padding: const EdgeInsetsDirectional.fromSTEB(18, 0, 150, 0),
         // child:
         Padding(
           padding: const EdgeInsets.only(right: 70),
+
           child : Container(
               width: MediaQuery.of(context).size.width * 0.4,
+              height: MediaQuery.of(context).size.height * 0.65,
+              // color: Colors.black,
+              alignment: Alignment.center,
+              
               child: ClipRect(
                   child: Image.asset(
-                'assets/images/sidelook.png',
+                'assets/images/sideloook.png',
+                width: MediaQuery.of(context).size.width * 0.4,
+                height: MediaQuery.of(context).size.height * 0.9,
                 // width: 800,
                 // height: 750,
-                fit: BoxFit.contain,
+                fit: BoxFit.cover,
               ))),
               
         ),
         // ),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             // Container(
             // color: Colors.black26,
@@ -44,6 +53,8 @@ class phase2 extends StatelessWidget {
             // fontWeight: FontWeight.w900,
             // decoration: TextDecoration.none,))
             // )
+
+            SizedBox(height: 90,),
 
             Container(
                 // width: 450,
